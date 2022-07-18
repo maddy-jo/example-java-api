@@ -1,0 +1,29 @@
+---
+# Configuration for Snyk
+# * This is only required for Maven builds
+# Snyk calls it's own internal build from the package manager, similar to a mvn install.
+# You will have to change the arguments to match your settings.xml and the Github secret associated with the argument
+snyk:
+  additional-args:
+  - -PGITHUB_ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }}
+  java-version: 17
+# Remove image block if you're not building Docker images
+images:
+  - name: example-api-app
+    path: "./Dockerfile"
+    args:
+      -  GITHUB_ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }}
+  - name: example-api-db-init
+    path: "./db-init/src/docker/Dockerfile"
+
+# Additional images can be specified like below
+# - name:
+#   path: ""
+#   args:
+#   -
+# Remove source block if you're not building sources
+# source:
+#   java-version: 17
+#   args:
+#     - -Dexample-build-arg=some-value
+#     - -Dexample.maven=${{ secrets.example_secret }}

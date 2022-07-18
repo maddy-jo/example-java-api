@@ -1,0 +1,9 @@
+s/io\.va\.starter\.example\.api\.account/gov.va.starter.example.api.facilityvisit/
+s/io\.va\.starter\.example\.service\.spi\.account/gov.va.starter.example.service.spi.facilityvisit/
+s/io\.va\.starter\.example\.service\.provider\.account/gov.va.starter.example.service.provider.facilityvisit/
+s/io\.va\.starter\.example\.controller\.account/gov.va.starter.example.controller.facilityvisit/
+s/io\.va\.starter\.example\.api/gov.va.starter.example.api/
+s/io\.va\.starter\.example/gov.va.starter.example/
+s/io\.va/gov.va/
+s/account/facilityVisit/g
+s/Account/FacilityVisit/g
